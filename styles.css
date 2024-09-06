@@ -156,6 +156,25 @@ p {
     color: #666;
 }
 
+.client-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.client-links a {
+    padding: 10px 15px;
+    background-color: #0073e6;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.client-links a:hover {
+    background-color: #005bb5;
+}
+
 #contact {
     background: #fafafa;
 }
