@@ -43,6 +43,10 @@ a {
     z-index: 1;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .cta-btn {
     padding: 15px 30px;
     background: #ff4081; /* Updated for a more vibrant color */
