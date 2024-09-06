@@ -19,47 +19,36 @@ a {
 /* Hero Section Styling */
 #hero {
     height: 100vh;
-    background: url('your-photo-hero.jpg') no-repeat center center/cover; /* Keeps your photo as the main background */
+    background: url('your-photo-hero.jpg') no-repeat center center/cover;
     background-size: cover;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: relative;
     text-align: center;
-    padding: 0 20px; /* Add padding to maintain proper spacing on smaller devices */
-}
-
-#hero h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    z-index: 1; /* Keeps the text above the background */
-}
-
-#hero p {
-    font-size: 1.5rem;
-    margin-bottom: 40px;
-    z-index: 1;
-}
-
-html {
-    scroll-behavior: smooth;
+    position: relative;
+    padding: 0 20px;
+    z-index: 0; /* Ensure hero section is behind the button */
 }
 
 .cta-btn {
     padding: 15px 30px;
-    background: #ff4081; /* Updated for a more vibrant color */
+    background: #ff4081;
     color: white;
     border-radius: 25px;
     font-size: 1.2rem;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    z-index: 1;
+    z-index: 10; /* Ensure the button stays clickable */
 }
 
 .cta-btn:hover {
     background-color: #ff79b0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* Fixing the overlay for readability, if needed */
@@ -72,6 +61,18 @@ html {
     height: 100%;
     background: rgba(0, 0, 0, 0.3); /* A subtle overlay to improve text visibility */
     z-index: 0;
+}
+
+#hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    z-index: 1; /* Keeps the text above the background */
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    z-index: 1;
 }
 
 /* Responsive settings for smaller screens */
