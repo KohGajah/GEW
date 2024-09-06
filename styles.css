@@ -244,6 +244,10 @@ a {
     color: #005bb5;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Footer */
 footer {
     background-color: #333;
