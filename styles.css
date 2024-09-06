@@ -200,6 +200,13 @@ a {
     color: #666;
 }
 
+.client p:first-of-type {
+        opacity: 0.5; /* or use filter: blur(1px); for blur effect */
+        font-size: 0.9rem; /* Optional size reduction */
+    }
+
+
+
 .client-links {
     margin-top: 15px;
     display: flex;
