@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #f0f4f8; /* Softer background color */
+    background-color: #f0f4f8;
     line-height: 1.6;
     color: #333;
 }
@@ -19,8 +19,7 @@ a {
 /* Hero Section Styling */
 #hero {
     height: 100vh;
-    background: linear-gradient(135deg, rgba(0, 176, 255, 0.8), rgba(0, 85, 255, 0.8)), 
-                url('your-photo-hero.jpg') no-repeat center center/cover;
+    background: url('your-photo-hero.jpg') no-repeat center center/cover; /* Keeps your photo as the main background */
     background-size: cover;
     color: white;
     display: flex;
@@ -29,33 +28,29 @@ a {
     flex-direction: column;
     position: relative;
     text-align: center;
-    animation: fadeIn 2s ease-in-out;
-    overflow: hidden;
+    padding: 0 20px; /* Add padding to maintain proper spacing on smaller devices */
 }
 
 #hero h1 {
     font-size: 4rem;
     margin-bottom: 20px;
-    animation: fadeInDown 1s ease-in-out;
     z-index: 1; /* Keeps the text above the background */
 }
 
 #hero p {
     font-size: 1.5rem;
     margin-bottom: 40px;
-    animation: fadeInUp 1s ease-in-out;
-    z-index: 1; /* Keeps the text above the background */
+    z-index: 1;
 }
 
 .cta-btn {
     padding: 15px 30px;
-    background: #ff4081;
+    background: #ff4081; /* Updated for a more vibrant color */
     color: white;
     border-radius: 25px;
     font-size: 1.2rem;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    animation: fadeInUp 1.5s ease-in-out;
     z-index: 1;
 }
 
@@ -63,7 +58,7 @@ a {
     background-color: #ff79b0;
 }
 
-/* Add a translucent overlay on the background image */
+/* Fixing the overlay for readability, if needed */
 #hero::before {
     content: '';
     position: absolute;
@@ -71,8 +66,66 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
-    z-index: 0; /* Stays behind the text */
+    background: rgba(0, 0, 0, 0.3); /* A subtle overlay to improve text visibility */
+    z-index: 0;
+}
+
+/* Responsive settings for smaller screens */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1.2rem;
+    }
+
+    .cta-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+}
+
+/* About Section */
+.section-bg {
+    background: #ffffff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: #666;
+    max-width: 800px;
+    text-align: justify; /* For improved readability */
 }
 
 /* Fun Animated Background Elements */
