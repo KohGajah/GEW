@@ -7,23 +7,20 @@
 }
 
 body {
+    background-color: #f0f4f8; /* Softer background color */
     line-height: 1.6;
-    background-color: #f4f4f4;
+    color: #333;
 }
 
 a {
     text-decoration: none;
 }
 
-section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
 /* Hero Section Styling */
 #hero {
     height: 100vh;
-    background: url('your-photo-hero.jpg') no-repeat center center/cover;
+    background: linear-gradient(135deg, rgba(0, 176, 255, 0.8), rgba(0, 85, 255, 0.8)), 
+                url('your-photo-hero.jpg') no-repeat center center/cover;
     background-size: cover;
     color: white;
     display: flex;
@@ -33,6 +30,7 @@ section {
     position: relative;
     text-align: center;
     animation: fadeIn 2s ease-in-out;
+    overflow: hidden;
 }
 
 #hero h1 {
@@ -51,12 +49,18 @@ section {
 
 .cta-btn {
     padding: 15px 30px;
-    background: rgba(255, 255, 255, 0.8);
-    color: #333;
+    background: #ff4081;
+    color: white;
     border-radius: 25px;
     font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
     animation: fadeInUp 1.5s ease-in-out;
-    z-index: 1; /* Keeps the button above the background */
+    z-index: 1;
+}
+
+.cta-btn:hover {
+    background-color: #ff79b0;
 }
 
 /* Add a translucent overlay on the background image */
@@ -67,59 +71,38 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Darken the image for better text visibility */
-    z-index: 0; /* This stays behind the text */
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+    z-index: 0; /* Stays behind the text */
 }
 
-/* Responsive settings for smaller screens */
-@media (max-width: 768px) {
-    #hero h1 {
-        font-size: 2.5rem;
-    }
-
-    #hero p {
-        font-size: 1.2rem;
-    }
-
-    .cta-btn {
-        padding: 10px 20px;
-        font-size: 1rem;
-    }
+/* Fun Animated Background Elements */
+#hero::after {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    top: -200px;
+    left: -150px;
+    border-radius: 50%;
+    animation: moveCircle 15s infinite ease-in-out alternate;
+    z-index: 0;
 }
 
-@media (max-width: 480px) {
-    #hero h1 {
-        font-size: 2rem;
+@keyframes moveCircle {
+    0% {
+        transform: translateY(0) rotate(0deg);
     }
-
-    #hero p {
-        font-size: 1rem;
+    100% {
+        transform: translateY(100px) rotate(360deg);
     }
 }
 
-.section-bg {
-    background: #ffffff;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-}
-
+/* Clients Section */
 #clients {
-    background: #f9f9f9;
+    background: linear-gradient(135deg, #ffffff, #e0f7fa);
 }
+
 .clients-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -130,24 +113,32 @@ p {
 .client {
     background: #ffffff;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    overflow: hidden;
 }
 
 .client:hover {
     transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .client img {
     max-width: 100px;
     margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.client:hover img {
+    transform: rotate(360deg);
 }
 
 .client h3 {
     font-size: 1.4rem;
     margin-bottom: 10px;
+    color: #0073e6;
 }
 
 .client p {
@@ -175,19 +166,37 @@ p {
     background-color: #005bb5;
 }
 
+/* Contact Section */
 #contact {
-    background: #fafafa;
+    background-color: #0d3b66;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
 }
 
+#contact h2 {
+    color: #ffffff;
+}
+
+#contact p {
+    color: #cfd8dc;
+}
+
+#contact a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    color: #005bb5;
+}
+
+/* Footer */
 footer {
-    background: #333;
-    color: white;
+    background-color: #333;
+    color: #f4f4f4;
     padding: 20px 0;
     text-align: center;
-    margin-top: 50px;
-}
-
-footer p {
     font-size: 0.9rem;
 }
 
