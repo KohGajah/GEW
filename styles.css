@@ -121,11 +121,11 @@ a {
 
 .about-text p {
     font-size: 1.1rem;
-    margin-bottom: 15px;
-    line-height: 1.8;
+    margin-bottom: 20px; /* Increased margin between paragraphs for better spacing */
+    line-height: 1.8; /* Improved line spacing for readability */
     color: #666;
-    max-width: 800px;
-    text-align: justify; /* For improved readability */
+    max-width: 800px; /* Limits paragraph width to enhance readability */
+    text-align: justify; /* Text justification for a clean, organized look */
 }
 
 /* Fun Animated Background Elements */
